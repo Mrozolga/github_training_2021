@@ -31,9 +31,10 @@ class Cat(Animal):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         raise Exception("Not enough arguments!")
-    called_animal = Dog(sys.argv[1], sys.argv[2])
+    if sys.argv[3] not in ['dog', 'cat']:
+        raise Exception("Type must be 'dog' or 'cat' only!")
     if sys.argv[3] == 'dog':
         called_animal = Dog(sys.argv[1], sys.argv[2])
     if sys.argv[3] == 'cat':
