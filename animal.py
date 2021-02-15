@@ -21,6 +21,8 @@ class Dog(Animal):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        raise Exception("Not enough arguments!")
     called_animal = Dog(sys.argv[1], sys.argv[2])
     called_animal.speak()
 
