@@ -31,6 +31,7 @@ class Cat(Animal):
 
 
 if __name__ == "__main__":
+    print("Start of __main__")
     if len(sys.argv) < 3:
         raise Exception("Too few arguments provided")
     if sys.argv[3] not in ['dog', 'cat']:
