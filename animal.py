@@ -13,15 +13,13 @@ class Animal(object):
 class Dog(Animal):
     def __init__(self, name, age):
         super().__init__(name, age)
-        self.name = name
-        self.age = age
         self.type = "dog"
 
     def speak(self):
         super().speak()
-        print("I am a Dog")
+        print("Woof!")
 
 
 if __name__ == "__main__":
-    called_dog = Dog(sys.argv[1], sys.argv[2])
-    called_dog.speak()
+    called_animal = Dog(sys.argv[1], sys.argv[2])
+    called_animal.speak()
