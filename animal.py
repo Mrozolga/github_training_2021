@@ -31,8 +31,13 @@ class Cat(Animal):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        raise Exception("Too few arguments provided")
+    if sys.argv[3] not in ['dog', 'cat']:
+        raise Exception("Third argument needs to be 'dog' or 'cat'")
     if sys.argv[1] == 'dog':
         called_animal = Dog(sys.argv[1], sys.argv[2])
     if sys.argv[1] == 'cat':
         called_animal = Cat(sys.argv[1], sys.argv[2])
+    called_animal = Dog(sys.argv[1], sys.argv[2])
     called_animal.speak()
