@@ -41,3 +41,4 @@ if __name__ == "__main__":
         called_animal = Cat(sys.argv[1], sys.argv[2])
     called_animal = Dog(sys.argv[1], sys.argv[2])
     called_animal.speak()
+    print("End of __main""")
